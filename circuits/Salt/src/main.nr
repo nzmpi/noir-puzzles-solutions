@@ -7,8 +7,11 @@
 // Note: An example of importing the standard library can be seen from the link below.
 //       https://noir-lang.org/standard_library/logging
 
+use mimc::mimc_bn254;
+
 fn main(a : Field, salt : Field) -> pub Field {
-  // your code here
+    let input: [Field; 2] = [a, salt];
+    mimc_bn254(input)
 }
 
 ////////////////////
